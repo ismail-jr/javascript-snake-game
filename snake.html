@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #708090 , #000000);
+        }
+
+        #gameContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        canvas {
+            border: 3px solid #e8e1e1;
+        }
+
+        #score {
+            color: #f0f0f0;
+            margin-top: 20px;
+            text-align: center;
+            padding-bottom: 20px;
+            font-size: 50px;
+        }
+        #resetBtn{
+            padding:5px 10px 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e30385;
+            color: #f0f0f0;
+            cursor: pointer;
+            font-size: 17px;
+            height: 30px;
+            width: 90px;
+            transition: 0.4s ease;
+        }
+        #resetBtn:hover{
+            background-color: #c75296;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div id="score">Score: <span id="scoreValue">0</span></div>
+        <button onclick="resetGame()" id="resetBtn">Reset</button>
+    </div>
+    <script src="snake.js"></script>
+</body>
+</html>
+
